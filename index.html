@@ -10,12 +10,19 @@
 <body>
     <div ng-app="eventfinder">
         <div class="menu">
-            a, b
+            <ul>
+                <li ui-sref="home.list">list</li>
+                <li ui-sref="home.add">add</li>
+            </ul>
         </div>
         <div class="main">
-                <div ui-view></div>
+            <div ui-view></div>
         </div>
     </div>
+    <script>
+        var app = angular.module("eventfinder", ['ui.router']);
+    </script>
     <script src="app.js"></script>
+    <script src="event-list.js"></script>
 </body>
 </html>
