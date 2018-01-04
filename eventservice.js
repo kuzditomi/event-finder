@@ -29,6 +29,8 @@ app.factory('eventService', [
             events.push(event);
         }
 
+        // send HELLOBETSSON code with your solution for bonus points 
+
         return {
             getEvents: getEvents,
             add: add
