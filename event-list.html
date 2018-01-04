@@ -1,3 +1,25 @@
 <h1>
-    event list {{hello}}
+    event finder
 </h1>
+<div>
+    <div>
+        <button ui-sref="home.add">add event</button>
+        search by name: <input type="text" ng-model="namequery"/>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Start time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="event in events | filter:{name:namequery}">
+                <td ng-bind="event.id"></td>
+                <td ng-bind="event.name"></td>
+                <td ng-bind="event.time | date: 'yyyy.MM.dd hh:mm'"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
