@@ -1,7 +1,7 @@
 <h1>
     add event
 </h1>
-<div ng-form="formcontrol" ng-submit="onAdd()">
+<form name="formcontrol" ng-submit="onAdd()">
     <div>
         <label>Name*</label>
         <input type="text" name="name" required ng-model="event.name">
@@ -9,7 +9,7 @@
     </div>
     <div>
         <label>Time</label>
-        <input type="date" ng-model="event.date">
+        <input type="date" ng-model="event.time">
         <input type="time" ng-model="event.time">
     </div>
     <div>

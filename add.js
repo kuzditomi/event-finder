@@ -1,17 +1,20 @@
 app.controller('eventAdd', [
-    '$scope',
-    function (scope) {
+    '$scope', 'eventService',
+    function (scope, eventService) {
         var now = new Date();
         now.setSeconds(0);
         now.setMilliseconds(0);
 
         scope.event = {
-            date: now,
             time: now
         };
 
         scope.onAdd = function () {
-            console.log(scope.event)
+            var event = {
+                name: scope.event.name,
+                time: scope.event.time
+            }
+            eventService.add(event);
         };
     }
 ]);
