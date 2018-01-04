@@ -16,9 +16,7 @@ app.config([
         .state('home.add', {
             url: '/add',
             templateUrl: 'add.html',
-            controller: function($scope){
-
-            }
+            controller: 'eventAdd'
         });
     }
 ]);
